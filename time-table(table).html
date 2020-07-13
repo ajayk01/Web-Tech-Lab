@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Time Table</title>
+    <style>
+      #table
+      {
+        font-size: large;
+        font-weight: bold;
+        color:white;
+      }
+        #h1 {
+            color: yellow;
+            }
+            table, th, td {
+  border: 5px solid brown;
+  background-color: rgb(22, 18, 224);
+  color:cyan;
+}
+#wt
+{
+  color :cornsilk;
+}
+#ele{
+   color:darkkhaki;
+}
+#ead{
+  color:darksalmon;
+}
+#se
+{
+  color:violet;
+}
+#cn
+{
+  color:chartreuse;
+
+}
+    </style>
+  </head>
+  <body bgcolor="#444444">
+    <h1 id="h1"> Time table of III-A </h1>
+  <center>
+   <table><p id="table">
+       Time table</p>
+       <tr>
+         <th>day</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+      </tr>
+      <tr>
+      <td>Monday</td>
+      <td id="wt">WT-TECH</td>
+      <td id="ele">MFML/CSE</td>
+      <td id="ead" colspan="2">EAD-LAB</td>
+      <td id="se">SE</td>
+      <td id="wt" rowspan="5">PT-Test</td>
+    </tr>
+      <tr>
+      <td>Tuesday</td>
+      <td id="se">SE</td>
+      <td id="ead">EAD</td>
+      <td id="cn">CN</td>
+      <td id="wt" colspan="2">WT-TECH LAB</td>
+    </tr>
+    <tr>
+      <td>Wednesday</td>
+      <td id="wt" colspan="2">WT-TECH</td>
+      <td id="ele">MFML/CSE</td>
+      <td id="ead">EAD</td>
+      <td id="cn">CN</td>
+     </tr>
+     <tr>
+      <td>Thursday</td>
+      <td id="cn">CN</td>
+      <td id="wt">WT-TECH</td>
+      <td id="se">SE</td>
+      <td colspan="2">PST</td>
+
+    </tr>
+    <tr>
+      <td>Friday</td>
+      <td id="se">SE</td>
+      <td id="cn" colspan="2">N/W-LAB</td>
+      <td id="ele">MFML/CSE</td>
+      <td id="ead">EAD</td>
+    </tr>
+   </table> </center><br>
+   <center><button onclick="return close1()"> Thank You</button></center>
+  </body>
+  <script type="text/javascript">
+    function close1()
+    {
+     alert("Thank You😊");
+      window.close();
+    }
+    </script>
+</html>
