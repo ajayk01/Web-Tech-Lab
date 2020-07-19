@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<title>Forms </title>
+<form action="" autocomplete="on">
+<b>select the state:
+<select name="state"  id="st"  size="1"autofocus required tabindex="1" >
+                <option> delhi</delhi>
+                <option value="tn" selected>tamilnadu</option>
+                <option value="Ke">Kerala</option>
+                <option value="KA"  >Karnatka</option>
+                <option value="ori">orissa</option> 
+</select> <br> <br>
+points scored:
+<input type="number" id="points" name="points" max="30" min="6" step="3" tabindex="2"><br><br>
+
+<label for="browser">Choose your browser from the list:</label>
+    <input list="browsers" name="br" id="b" readonly  value="Edge" tabindex="4">
+        <datalist id="browsers">
+            <option value="Edge">
+            <option value="Firefox">
+            <option  value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+         </datalist><br> <br>
+Select the vehicle  you have: <!-- Check box-->
+<input type="checkbox" name="vehicle" value="Bike" checked>I have a bike
+<input type="checkbox" name="vehicle" value="Car">I have a car <br> <br>
+
+Select the gender:  <!-- Radio Button -->
+<input type="radio" name="gender" >Male <!-- Radio Choice -->
+<input type="radio" name="gender" >Female<br> <br> <!-- Radio Choice -->
+
+Username: <input type="text" name="user" disabled /> <!-- Text Box -->
+Password: <input  type="password" name="pwd" / > <br> <br> <!-- Password -->
+
+<textarea rows="" cols="" tabindex="3">
+    inbulit string
+</textarea > <br> <br>
+<fieldset>
+    <legend>Personal information:</legend>
+    
+    Name: <input type="text" size="3"> <br> <br>
+    E-mail: <input type="text" size="3"> <br> <br>
+    Date of birth: <input type="text" size="10"> <br> <br>
+    
+    
+</fieldset> <br> <br>
+enter the  age limit[  1 to 25]
+<input type="number" id="age" name="age" min="18" max="25"><br> <br>
+Volume:
+<input type="range" id="vol" name="vol" min="75" max="100"> <br> <br>
+Select your favorite color:
+<input type="color" id="favcol" name="favcolor" value=""><br> <br>
+Upload your photo:
+<input type="file" id="myfile" name="myfile" multiple><br> <br>
+Email:
+  <input type="email" id="email" name="email" placeholder="type your Email" ><br> <br>
+  Enter the video link
+  <input type="url" id="home" name="homepage" placeholder="type u blog url " ><br> <br>
+  Phone Number
+  <input type="tel" id="phone" name="phone"   placeholder="type 10 digits" pattern= "[0-9]{10}" ><br> <br>
+  Bitrhday:
+  <input type="date" id="birthday" name="birthday"><br> <br>
+
+  Enter a date before 1980-01-01:
+  <input type="date" id="datemax" name="datemax" max="1979-12-31"> <br> <br>
+
+ Enter a date after 2000-01-01:
+  <input type="date" id="datemin" name="datemin" min="2000-01-05"><br> <br>
+  
+   Birthday (date and time):
+  <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br> <br>
+ Birthday (month and year):
+  <input type="month" id="bdaymonth" name="bdaymonth"><br> <br>
+  
+Select a week and year:
+  <input type="week" id="week" name="week"><br> <br>
+
+Select a time:
+  <input type="time" id="appt" name="appt"><br> <br>
+  search:
+<input type="search"  name="s"/><br> <br>
+Upload the certificates:
+<input type="file" id="files" name="files" multiple><br> <br>
+Enter te country code:
+<input type="text" id="country_code" name="country_code"  pattern="[A-Za-z]{3}" title="Three letter country code"> <br><br>
+  
+Enter the registation number  
+<input type="text" id="phone" name="phone" placeholder="18MCA023" pattern="[0-9]{2}[A-Za-z]{3}[0-9]{3}"><br><br>
+
+<input type="submit" value="send"/>
+<input type="reset" value="clear">
+<input type="image" src="imgbutton.jpg" alt="Submit" width="160"
+  height="60">
+</form>
+</body>
+</html>
