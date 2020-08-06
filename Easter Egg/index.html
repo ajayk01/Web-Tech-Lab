@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <head>
-  <title>Easter Egg</title>
+  <title>Login In</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <style>
+    #head
+    {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    }
     #name
     {
         color:gold;
@@ -25,10 +36,10 @@
         color:#444444;}
         100%{color:gold;}
       }
-      #menu
+      nav
       {
-        /* padding-left: 38cm; */
-        display:inline-block;
+        padding-left: 35cm;
+        font-size: 0.5cm;
       }
       ul li {display: inline-block;}
       ul li:hover {background: #555;}
@@ -49,20 +60,21 @@
 </head>
 <body bgcolor="#44444444">
     
-   <center> <h1 style="color: gold;"> Welcome , Login or SignUp to view the full page 
+   <center>
+    <div class="jumbotron" >
+      <h1 id="head" style="font-size:1.3cm; color: gold;">Easter Egg</h1>       
+    <p id="head" style="font-size:0.7cm;     color: #007bff!important;" class="text-primary"> Welcome , Login or SignUp to view the full page about CARTOONS </p>
   </center>
-  <h3 style="color: gold;" id="menu"> 
-  <nav>  <ul>
-      <li>
-        <a href="#" style="color: gold;">Menu </a>
-        <ul>
-          <li><a href="#" style="color: gold;" onclick="show1()">Login</a></li>
-          <li><a href="signup.html" style="color: gold;">Sign up</a></li>
-          
-        </ul>
-      </li>
-    </ul>
-  </nav>
+    <nav id= "head"><ul style="color: gold;">
+      <li><a href="#" style="color: gold;" onclick="show1()">Login</a></li>
+      &nbsp;&nbsp;
+      <li><a href="signup.html" style="color: gold;">Sign up</a></li>
+  </ul>
+</nav> 
+    </div>
+  
+  
+  
      <hr>
     <iframe  width="700" height="400"src="https://www.youtube.com/embed/YE41vpMqybk"></iframe>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
