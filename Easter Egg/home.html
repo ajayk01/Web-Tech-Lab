@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    
+    <title>  Easter Eggs</title>
+
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
+    <style>
+      #head
+      {
+        color:gold;
+        padding-left: 3%;
+        animation-name: egg;
+        animation-duration: 2s;
+        
+      }
+      @keyframes egg 
+        {
+            0%{color:#444444;}
+            100%{color: gold;}
+
+        }
+      button
+      {
+        
+        color: gold;
+        font-size: 0.6cm;
+        
+        background-color: #444444;
+        animation-name: egg-b;
+        animation-duration: 2s;
+      }
+      @keyframes egg-b
+      {
+        0%{border-radius: 0cm;
+        border: 0cm;
+        color:#444444;}
+        100%{color:gold;}
+      }
+     
+        #h1 {
+            color: yellow;
+            }
+            table, th, td {
+                  border: 5px solid grey;
+                  padding: 10px;
+                  color:gold;
+                            }
+tr:hover {background-color: gray;}
+img{
+  padding: 10px;
+  width: 180px;
+}
+  </style>
+  </head>
+  <body bgcolor="#444444">
+    <div id="head">
+      <h1 >Welcome To Easter Egg Pages </h1></div>
+     <center> <button onclick="show()">Click To Jump into a Childhood ❤</button></center>
+     <div id="Div" style="display:none;"> 
+       
+     <br> <center> <table>
+        <tr>
+          <td>Names</td>
+          <td>Ben 10</td>
+          <td>Shinchan</td>
+          <td>Doremon</td>
+          <td>Iron Man and Aromed Adventures</td>
+          </tr>
+          <tr>
+            <td>Images</td>
+            <td><a href ="ben10.html"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FClfwlyIWIAAdBCP.png&f=1&nofb=1"width="15%"></a></td>
+            <td><a href="shinchan.html"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F57%2F53%2F74%2F575374bf227f9845685a2950dd976f88--cartoon-characters-remember-this.jpg&f=1&nofb=1"width="15%"></a></td>
+            <td><a href ="doremon.html"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftophinhanhdep.com%2Fwp-content%2Fuploads%2F2017%2F07%2Fanh-dep-doremon-nobita-lam-hinh-nen.jpg&f=1&nofb=1"width="15%"></a></td>
+            <td><a href ="ironman.html"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.senscritique.com%2Fmedia%2F000011983522%2Fsource_big%2FIron_Man_Armored_Adventures.jpg&f=1&nofb=1"width="15%"></a></td>
+          </tr>
+    </table> <br>
+  <button onclick="show1()">Thank You</button> </center>
+    </div>
+    <div id="form" style="display:none;">
+      
+      <div style="color: gold; font-size: large;" > 
+        <form autocomplete="on">
+            <center> <h1 style="color:gold">FeedBack</h1> </center>
+        <fieldset>
+        <legend id="name">FeedBack : </legend>
+           <text id="name">User Id : </text> <input type="text" size="30" required="" placeholder="Enter Your User Id"> <br> <br>
+           <text id="name">FeedBack : </text> <br> <br> <textarea rows="05" cols="30"></textarea> <br> <br>
+           <text id="name"> FeedBack as File:</text>
+    <input type="file" id="files" name="files" multiple="" style="color:honeydew;"><br> <br>
+    <text id="name">Rating :</text>
+    <input type="range" id="vol" name="vol" max="100"> <br> <br>
+
+        </fieldset> <br> <br>
+   <center> <button>Submit</button> &nbsp; <button type="reset"> Reset</button> </center>
+      </div>  
+  </body>
+  <script>
+    function exit()
+    {
+      
+     alert("Thank You😊");
+      window.close();
+    
+    }
+    function show() {
+      alert("Click the Image to view the content 😁");
+     document.getElementById('Div').style.display = "block";
+  } 
+  function show1() {
+      alert("Fill the Feedback and leave!!! 😁");
+     document.getElementById('form').style.display = "block";
+  } 
+ </script>
+</html>
