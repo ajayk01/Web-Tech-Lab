@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Button clicked count 
+    </title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+      table, th, td {
+                  border: 5px solid grey;
+                  padding: 10px;
+                  
+                            }
+tr:hover {background-color: gray;}
+  </style>
+</head>
+<body>
+    <br>
+    &nbsp;<button type="button" class="btn btn-success"onclick="sb()">Success-Button</button>
+    <button type="button" class="btn btn-warning" onclick="wb()">Warning-Button</button>
+    <button type="button" class="btn btn-danger" onclick="db()">Danger-Button</button>
+    <br><br>
+    <div id="Div" style="display:none;">
+      <table>
+        <tr>
+          <td>Button Name</td>
+          <td>Success-Button</td>
+          <td>Warning-Button</td>
+          <td>Danger-Button</td>
+          
+          </tr>
+          <tr>
+            <td>Times Pressed</td>
+            <td id="s">0</td>
+            <td id="w">0</td>
+            <td id="d">0</td>
+          </tr>
+    </table>
+</div>
+<script>
+ var Success_b=0;
+ var warning_b=0;
+ var danger_b=0;
+ function sb()
+   {
+    Success_b=Success_b+1;
+    document.getElementById('Div').style.display = "block";
+    document.getElementById("s").innerHTML = Success_b;
+   }   
+   function wb()
+   {
+    warning_b=warning_b+1;
+    document.getElementById('Div').style.display = "block";
+    document.getElementById("w").innerHTML = warning_b;
+   }  
+   function db()
+   {
+    danger_b=danger_b+1;
+    document.getElementById('Div').style.display = "block";
+    document.getElementById("d").innerHTML = danger_b;
+   }   
+</script>
+
+</body>
+</html>
