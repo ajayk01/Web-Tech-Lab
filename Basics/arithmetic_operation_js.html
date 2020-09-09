@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Arithmetic Operation 
+    </title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <label> Enter The Number 1</label> <br>
+        <input type='number' id="1" required><br>
+        <label> Enter The Number 2</label><br>
+        <input type='number' id="2" required><br> <br>
+        <button type ="submit" class="btn btn-primary" onclick="add()">Addition</button>
+        <button  class="btn btn-primary" onclick="sub()">Sub</button>
+        <button  class="btn btn-primary" onclick="mul()">Multiply</button>
+        <button  class="btn btn-primary" onclick="divi()">Divide</button>
+        <button  class="btn btn-primary" onclick="more()">More Number</button> <br> <br> 
+        
+        <p id="Add"> </p>
+        <p id="sub"></p>
+        <p id="mul"></p>
+        <p id="divide"></p>
+        <div id="more"></div>  
+        <p id="Add-1"> </p>
+        <p id="sub-1"></p>
+        <p id="mul-1"></p>
+        <p id="divide-1"></p> 
+    </div>
+</body>
+<script> 
+    var n3;
+    function more()
+    {
+        alert("Enter the number in the Box for all the new numbers")
+        document.getElementById("more").innerHTML = "<label> Enter The Number </label> <br> <input type='number' id='3' required><br> <br> <button type ='submit' class='btn btn-primary' onclick='add_1()'>Addition</button> <button type ='submit' class='btn btn-primary' onclick='sub_1()'>Sub</button> <button type ='submit' class='btn btn-primary' onclick='mul_1()'>Multiplication</button> <button type ='submit' class='btn btn-primary' onclick='divi_1()'>Division</button> <button type ='submit' class='btn btn-primary' onclick='more()'>More Numbers</button> <br> <br>";
+    }
+    function add()
+    {
+        var  n = document.getElementById("1").value;
+        var n1 = document.getElementById("2").value;
+        if(n=="NaN")
+         {
+            document.getElementById("Add").innerHTML ="Please enter the number";
+         }
+         n3 =parseFloat(n)+parseFloat(n1);
+        document.getElementById("Add").innerHTML ="The Addition of Numbers is : "+n3;
+    }
+    function sub()
+    {
+        var  n = document.getElementById("1").value;
+        var n1 = document.getElementById("2").value;
+         n3 =parseFloat(n)-parseFloat(n1);
+        document.getElementById("sub").innerHTML ="The Subtraction of Numbers is : "+n3;
+    }
+    function mul()
+    {
+        var  n = document.getElementById("1").value;
+        var n1 = document.getElementById("2").value;
+         n3 =parseFloat(n)*parseFloat(n1);
+        document.getElementById("mul").innerHTML ="The Multiplication of Numbers is : "+n3;
+    }
+    function divi()
+    {
+        var  n = document.getElementById("1").value;
+        var n1 = document.getElementById("2").value;
+        if(parseInt(n1)==0)
+         {
+            document.getElementById("divide").innerHTML = "Infinity";
+         }
+        n3 =parseFloat(n)/parseFloat(n1);
+        document.getElementById("divide").innerHTML ="The Division of Numbers is : "+n3;
+    }
+    function add_1()
+    {
+        var  n = document.getElementById("3").value;
+        
+        if(n=="NaN")
+         {
+            document.getElementById("Add-1").innerHTML ="Please enter the number";
+         }
+         n3 =parseFloat(n)+n3;
+        document.getElementById("Add-1").innerHTML ="The Addition of Numbers is : "+n3;
+    }
+    function sub_1()
+    {
+        var  n = document.getElementById("3").value;
+       
+         n3 =parseFloat(n)-n3;
+        document.getElementById("sub-1").innerHTML ="The Subtraction of Numbers is : "+n3;
+    }
+    function mul_1()
+    {
+        var  n = document.getElementById("3").value;
+        
+         n3 =parseFloat(n)*n3;
+        document.getElementById("mul-1").innerHTML ="The Multiplication of Numbers is : "+n3;
+    }
+    function divi_1()
+    {
+        var  n = document.getElementById("3").value;
+        
+        if(parseInt(n)==0)
+         {
+            document.getElementById("divide-1").innerHTML = "Infinity";
+         }
+        n3 =parseFloat(n)/n3;
+        document.getElementById("divide-1").innerHTML ="The Division of Numbers is : "+n3;
+    }
+</script>
+</html>
