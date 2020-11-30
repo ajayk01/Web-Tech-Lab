@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <title>Login In</title>
+
+  
+</head>
+<body>
+    
+   <center>
+    <div>
+      <h1>Easter Egg</h1>       
+    <p> Welcome , Login or SignUp to view the full page about CARTOONS </p>
+  </center>
+    <nav ><ul>
+      <li><a href="#" onclick="show1()">Login</a></li>
+      &nbsp;&nbsp;
+      <li><a href="signup.html">Sign up</a></li>
+  </ul>
+</nav> 
+    </div>
+  
+  
+  
+     <hr>
+    
+    
+    
+    <form autocomplete="on" id="form" style="display:none;">
+        <center> <h1>Login-Form</h1> </center>
+        <hr><br>
+    
+  
+   <text>User Id : </text> <input type="text" size="30" required placeholder="Enter Your User Id"> <br> <br>
+   <text >Password : </text> <input type="password"  size="30" required placeholder="Enter Your Password"> <br> <br>
+</fieldset> <br> <br>
+<center> <a href="home.html"> <input type="button" id="button" value="login" style="font-size: 0.5cm;"/></a>
+   <input type="reset" value="Clear" style="font-size: 0.5cm;" id="button"> </center>
+   <br> <br>
+    </form>
+<script>
+     function show1() {
+        alert("Login Form is displayed below");
+       document.getElementById('form').style.display = "block";
+    } 
+    function exit() {
+        alert("Thank you ");
+        window.close();
+       
+    } 
+</script>
+</body>
+<footer>
+  Designed by 18ITR004 @Ajay 
+</footer>
+</html>
