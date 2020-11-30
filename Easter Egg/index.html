@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+  <title>Login In</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+    #head
+    {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    }
+    #name
+    {
+        color:gold;
+        font-size: larger;
+       
+    }
+    #button
+      {
+        
+        color: gold;
+        font-size: 0.6cm;
+        
+        background-color: #444444;
+        animation-name: egg-b;
+        animation-duration: 2s;
+      }
+      @keyframes egg-b
+      {
+        0%{border-radius: 0cm;
+        border: 0cm;
+        color:#444444;}
+        100%{color:gold;}
+      }
+      nav
+      {
+        
+        font-size: 0.5cm;
+      }
+      ul li {display: inline-block;}
+      ul li:hover {background: #555;}
+      ul li:hover ul {display: block;}
+      ul li ul {
+                  position: absolute;
+                  width: 200px;
+                  display: none;
+                }
+        ul li ul li { 
+                      background: #555; 
+                      display: block; 
+                    }
+          ul li ul li a {display:block !important;} 
+          ul li ul li:hover {background:white;}
+  </style>
+  
+</head>
+<body bgcolor="#44444444">
+    
+   <center>
+    <div class="jumbotron" >
+      <h1 id="head" style="font-size:1.3cm; color: gold;">Easter Egg</h1>       
+    <p id="head" style="font-size:0.7cm;     color: #007bff!important;" class="text-primary"> Welcome , Login or SignUp to view the full page about CARTOONS </p>
+  </center>
+    <nav id= "head"><ul style="color: gold;">
+      <li><a href="#" style="color: gold;" onclick="show1()">Login</a></li>
+      &nbsp;&nbsp;
+      <li><a href="signup.html" style="color: gold;">Sign up</a></li>
+  </ul>
+</nav> 
+    </div>
+  
+  
+  
+     <hr>
+    <iframe  width="700" height="400"src="https://www.youtube.com/embed/YE41vpMqybk"></iframe>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <iframe  width="700" height="400"src="https://www.youtube.com/embed/dzQKOnw7nAg"></iframe> <br> <br>
+   <center> <button id="button" onclick="exit()"> Exit </button> &nbsp;&nbsp; 
+    
+    
+    <form autocomplete="on" id="form" style="display:none;">
+        <center> <h1 style="color:gold">Login-Form</h1> </center>
+        <hr><br>
+    <fieldset>
+   <legend id="name">Login Credentials:</legend>
+   <text id="name">User Id : </text> <input type="text" size="30" required placeholder="Enter Your User Id"> <br> <br>
+   <text id="name">Password : </text> <input type="password"  size="30" required placeholder="Enter Your Password"> <br> <br>
+</fieldset> <br> <br>
+<center> <a href="home.html"> <input type="button" id="button" value="login" style="font-size: 0.5cm;"/></a>
+   <input type="reset" value="Clear" style="font-size: 0.5cm;" id="button"> </center>
+   <br> <br>
+    </form>
+<script>
+     function show1() {
+        alert("Login Form is displayed below");
+       document.getElementById('form').style.display = "block";
+    } 
+    function exit() {
+        alert("Thank you ");
+        window.close();
+       
+    } 
+</script>
+</body>
+<footer style = "color:yellow">
+  Designed By 18ITR004@Ajay.K
+</footer>
+</html>
