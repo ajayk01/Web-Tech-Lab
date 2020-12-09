@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<head>
+    <title> Calculator using Modules in Node.js</title>
+    
+
+    <style>
+         * {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #EAEBEC;
+  
+}
+/* input{
+  background: #3A4655;
+  width: 49.1%;
+  padding-left: 100%;
+  color: #fff;
+  
+} */
+.container {
+  width: 400px;
+  margin: auto;
+}
+
+.calc-body {
+  width: 275px;
+  margin: auto;
+  min-height: 400px;
+  border: solid 1px #3A4655;
+  box-shadow: 0 8px 50px -7px black;
+}
+
+.calc-screen {
+  background: #3A4655;
+  width: 100%;
+  height: 250px;
+  padding: 25px;
+}
+
+.calc-operation {
+  text-align: right;
+  color: #727B86;
+  font-size: 21px;
+  padding-bottom: 10px;
+  border-bottom: dotted 1px;
+}
+
+.calc-typed {
+  margin-top: 20px;
+  font-size: 45px;
+  text-align: right;
+  color: #fff;
+}
+
+.calc-button-row {
+  width: 100%;
+  background: #3C4857;
+}
+
+.button {
+  width: 25%;
+  background: #425062;
+  color: #fff;
+  padding: 20px;
+  display: inline-block;
+  font-size: 25px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: -4px;
+  border-right: solid 2px #3C4857;
+  border-bottom: solid 2px #3C4857;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-p {
+  width: 100%;
+  background: #425062;
+  color: #fff;
+  padding: 20px;
+  display: inline-block;
+  font-size: 25px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: -4px;
+  border-right: solid 2px #3C4857;
+  border-bottom: solid 2px #3C4857;
+  transition: all 0.2s ease-in-out;
+}
+
+.button.l {
+  color: #AEB3BA;
+  background: #404D5E;
+}
+
+.button.c {
+  color: #D95D4E;
+  background: #404D5E;
+}
+
+.button:hover {
+  background: #E0B612;
+  transform: rotate(5deg);
+}
+
+.button.c:hover,
+.button.l:hover {
+  background: #E0B612;
+  color: #fff;
+}
+
+.blink-me {
+  color: #E0B612;
+}
+    </style>
+</head>
+<body>
+  <form action="http://localhost:7777" method="get">
+    <div class="container">
+        <div class="calc-body">
+          <div class="calc-screen">
+            
+            <input  style="background-color: #3A4655; width: 100%; height: 28%; font-size: large; color: white;"  id="op-1" name="op-1" value="5"/>
+           <br> <br> <input style="background-color: #3A4655; width: 100%; height: 28%; font-size: large; color: white;" id="op" name="op">  </input>
+           <br> <br><input style="background-color: #3A4655; width: 100%; height: 28%; font-size: large; color: white;" id="op-2" name="op-2">  </input>
+          
+          </div>
+          <div class="calc-button-row">
+            <div class="button c" onclick="myFunction()">C</div>
+            
+            <div class="button l" onclick=""></div>
+            <div class="button l" id="%" value="%" onclick="op_m()">%</div>
+            <div class="button l" id="/" value="/" onclick="op_d()">/</div>
+          </div>
+          <div class="calc-button-row">
+            <div class="button" id="7" value="7" onclick="op_7()">7</div>
+            <div class="button" id="8" value="8" onclick="op_8()">8</div>
+            <div class="button" id="9" value="9" onclick="op_9()">9</div>
+            <div class="button l" id="x" value="x" onclick="op_mul()">x</div>
+          </div>
+          <div class="calc-button-row">
+            <div class="button" id="4" value="4" onclick="op_4()">4</div>
+            <div class="button"  id="5" value="5" onclick="op_5()">5</div>
+            <div class="button" id="6" value="6" onclick="op_6()">6</div>
+            <div class="button l" id="-" value="-" onclick="op_sub()">−</div>
+          </div>
+          <div class="calc-button-row">
+            <div class="button" id="1" value="1" onclick="op_1()">1</div>
+            <div class="button"id="2" value="2" onclick="op_2()">2</div>
+            <div class="button"  id="3" value="3" onclick="op_3()">3</div>
+            <div class="button l" id="+" value="+" onclick="op_add()">+</div>
+          </div>
+          <div class="calc-button-row">
+            <div class="button"> WT</div>
+            <div class="button" id="0" value="0" onclick="op_0()">0</div>
+            <div class="button">E7</div>
+                <button class="button l"  type="submit">=</button>
+            </div>
+            <div class="calc-button-row">
+              <div class="button-p" id="r"> RESULT</div>
+          </div>
+          </div>
+          
+        </div>
+       
+      </form>
+      
+        <script>
+          var flag=0;
+           function op_1() {
+             if(flag==0)
+             {
+            var n = document.getElementById("op-1").value;
+            document.getElementById("op-1").value= n +"1"
+            
+             }
+             else
+             {
+              var n = document.getElementById("op-2").value;
+            document.getElementById("op-2").value= n +"1"
+             }
+          }
+          function op_2() {
+             if(flag==0)
+             {
+            var n = document.getElementById("op-1").value;
+            document.getElementById("op-1").value= n +"2"
+             }
+             else
+             {
+              var n = document.getElementById("op-2").value;
+            document.getElementById("op-2").value= n +"2"
+             }
+            }
+             function op_3() {
+             if(flag==0)
+             {
+            var n = document.getElementById("op-1").value;
+            document.getElementById("op-1").value= n +"3"
+             }
+             else
+             {
+              var n = document.getElementById("op-2").value;
+            document.getElementById("op-2").value= n +"3"
+             }
+          }
+        
+          function op_4() {
+             if(flag==0)
+             {
+            var n = document.getElementById("op-1").value;
+            document.getElementById("op-1").value= n +"4"
+             }
+             else
+             {
+              var n = document.getElementById("op-2").value;
+            document.getElementById("op-2").value= n +"4"
+             }
+          }
+          function op_5() {
+             if(flag==0)
+             {
+            var n = document.getElementById("op-1").value;
+            document.getElementById("op-1").value= n +"5"
+             }
+             else
+             {
+              var n = document.getElementById("op-2").value;
+            document.getElementById("op-2").value= n +"5"
+             }
+          }
+          function op_6() {
+             if(flag==0)
+             {
+            var n = document.getElementById("op-1").value;
+            document.getElementById("op-1").value= n +"6"
+             }
+             else
+             {
+              var n = document.getElementById("op-2").value;
+            document.getElementById("op-2").value= n +"6"
+             }
+          }
+          function op_7() {
+             if(flag==0)
+             {
+            var n = document.getElementById("op-1").value;
+            document.getElementById("op-1").value= n +"7"
+             }
+             else
+             {
+              var n = document.getElementById("op-2").value;
+            document.getElementById("op-2").value= n +"7"
+             }
+          }
+          function op_8() {
+             if(flag==0)
+             {
+            var n = document.getElementById("op-1").value;
+            document.getElementById("op-1").value= n +"8"
+             }
+             else
+             {
+              var n = document.getElementById("op-2").value;
+            document.getElementById("op-2").value= n +"8"
+             }
+          }
+          function op_9() {
+             if(flag==0)
+             {
+            var n = document.getElementById("op-1").value;
+            document.getElementById("op-1").value= n +"9"
+             }
+             else
+             {
+              var n = document.getElementById("op-2").value;
+            document.getElementById("op-2").value= n +"9"
+             }
+          }
+          function op_m()
+          {
+            flag=1;
+            //var n = document.getElementById("op").value;
+            document.getElementById("op").value= '%'
+          }
+          function op_add()
+          {
+            flag=1;
+            //var n = document.getElementById("op").value;
+            document.getElementById("op").value= '+'
+          }
+          function op_sub()
+          {
+            flag=1;
+            //var n = document.getElementById("op").value;
+            document.getElementById("op").value= '-'
+          }
+          function op_mul()
+          {
+            flag=1;
+            //var n = document.getElementById("op").value;
+            document.getElementById("op").value= '*'
+          }
+          function op_d()
+          {
+            flag=1;
+            //var n = document.getElementById("op").value;
+            document.getElementById("op").value= '/'
+          }
+          function myFunction() {
+            flag=0;
+            document.getElementById("op").value= ''
+            document.getElementById("op-1").value= ''
+            document.getElementById("op-2").value= ''
+          }
+          </script>
+          
+</body>
+</html><center><h1 style='color:red'>sum of two numbers is 11</center>
