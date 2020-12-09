@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<head>
+    <title>CRUD in MONGO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+<style>
+     #color
+      {
+          color: rgb(0, 247, 255);
+      }
+ 
+body{
+    background-color: #444444;
+}
+</style>
+</head>
+<body>
+<div class="container">
+        <center><h2 id="color">CRUD Operations in MONGO DB</h2></center><br>
+    <div class="row">
+        <div class="col-sm-6">
+            <h4 id="color">Create Operation</h4><br>
+            <form class="form-horizontal" id="create" method="GET" action="http:\\localhost:8000">
+                <div class="form-group">
+                    <label id="color" class="control-label col-sm-2">Name :</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="name" placeholder="Enter Your Name" name="name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="color" class="control-label col-sm-2">Email Address</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" name="email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="color" class="control-label col-sm-2">Phone Number</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="number" placeholder="Enter Your number" name="number" maxlength="10" minlength="10">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="color" class="control-label col-sm-2">DOB</label>
+                    <div class="col-sm-10">
+                      <input type="date" class="form-control" id="date" placeholder="Enter Your DOB" name="dob">
+                    </div>
+                  </div>
+                  
+                  <div class="radio">
+                    <label id="color" class="control-label col-sm-2">GENDER</label> <br>
+                    <label id="color"><input type="radio" name="gender" value="male" id="color">MALE</label>
+                    <label id ="color"><input type="radio" name="gender" value="female" id="color">FEMALE</label>
+                  </div> <br> &nbsp;&nbsp;&nbsp;
+                 &nbsp; <button type="submit" class="btn btn-success" name="func" value="create">CREATE</button>
+
+            </form>
+        </div>
+
+        <div class="col-sm-6">
+            <h4 id="color">Update Operation Enter the Field to be updated Name field is MUST</h4> <br>
+            <form class="form-horizontal" id="update" method="GET" action="http:\\localhost:8000">
+                <div class="form-group">
+                    <label id="color" class="control-label col-sm-2">Name :</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="name" placeholder="Enter Your Name" name="name" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="color" class="control-label col-sm-2">Email Address</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" name="email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="color" class="control-label col-sm-2">Phone Number</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="number" placeholder="Enter Your number" name="number" maxlength="10" minlength="10">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label id="color" class="control-label col-sm-2">DOB</label>
+                    <div class="col-sm-10">
+                      <input type="date" class="form-control" id="date" placeholder="Enter Your DOB" name="dob">
+                    </div>
+                  </div>
+                  
+                  <div class="radio">
+                    <label id="color" class="control-label col-sm-2">GENDER</label> <br>
+                    <label id="color"><input type="radio" name="gender" id="color">MALE</label>
+                    <label id ="color"><input type="radio" name="gender" id="color">FEMALE</label>
+                  </div> <br> &nbsp;&nbsp;&nbsp;
+                 &nbsp; <button type="submit" name="func" value="update" class="btn btn-success">UPDATE</button>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <h4 id="color">Delete Operation Enter the Name to be DELETED is MUST</h4> <br>
+       
+        <form class="form-horizontal" id="update" method="GET" action="http:\\localhost:8000">
+              <div class="form-group">
+              <label id="color" class="control-label col-sm-2">Name :</label>
+              <div class="col-sm-10">
+                      <input type="text" class="form-control" id="name" placeholder="Enter Your Name" name="name" required>
+                </div>
+        </div>
+        <button type="submit" class="btn btn-success" name="func" value="delete">DELETE</button>
+      </form>
+      </div>
+      <div class="col-sm-6">
+        <h4 id="color">Display Operation: CLICK BELOW TO VIEW</h4> <br>
+
+        </div>
+        <form method="GET" action="http:\\localhost:8000">
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="submit" class="btn btn-success" name="func" value="dis">DISPLAY</button> </form>
+
+ </div>
+</body>
+</html>
